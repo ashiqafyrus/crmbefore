@@ -1,0 +1,107 @@
+{% extends "navbar.html" %}
+{% block content %}
+<!-- Section: Design Block -->
+<section class="text-center text-lg-start my-5 bg-white">
+    <style>
+        /* Additional custom styling */
+        .card {
+            background-color: #fff;
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .card-img-top {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 0.5s ease;
+            padding-top: 70px;
+        }
+
+        .card:hover .card-img-top {
+            transform: scale(1.1);
+        }
+
+        .card-body {
+            padding: 2rem;
+        }
+
+        .form-control {
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            padding: 12px;
+        }
+
+        .btn-primary {
+            background-color: #ff4500;
+            border: none;
+            border-radius: 10px;
+            padding: 12px 24px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #ff6347;
+        }
+
+        @media (min-width: 992px) {
+            .card {
+                display: flex;
+                align-items: center;
+            }
+
+            .card-img-top {
+                border-radius: 0 20px 20px 0;
+            }
+        }
+    </style>
+    {% load static %}
+    <div class="card">
+        <div class="row g-0">
+            <div class="col-lg-8">
+                <div class="card-body">
+                    <h2 class="fw-bold mb-4">Welcome Back!</h2>
+                    <form>
+                        <!-- Email input -->
+                        <div class="form-outline mb-4">
+                            <input type="email" id="form2Example1" class="form-control" />
+                            <label class="form-label" for="form2Example1">Email address</label>
+                        </div>
+
+                        <!-- Password input -->
+                        <div class="form-outline mb-4">
+                            <input type="password" id="form2Example2" class="form-control" />
+                            <label class="form-label" for="form2Example2">Password</label>
+                        </div>
+
+                        <!-- Checkbox and forgot password link -->
+                        <div class="row mb-4">
+                            <div class="col">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
+                                    <label class="form-check-label" for="form2Example31"> Remember me </label>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <a href="#!" class="text-decoration-none">Forgot password?</a>
+                            </div>
+                        </div>
+
+                        <!-- Submit button -->
+                        <button type="button" class="btn btn-primary btn-block mb-4">Sign in</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <img src="{% static 'images/login.png' %}" alt="Login Background" class="card-img-top img-fluid" />
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Section: Design Block -->
+{% endblock %}

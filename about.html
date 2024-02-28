@@ -1,0 +1,84 @@
+{% extends "navbar.html" %}
+{% block content %}
+<style>
+    body {
+        background-color: #f8f9fa; /* Set background color */
+    }
+
+    .content-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 50px 20px;
+        text-align: justify;
+        background-color: #fff; /* Set background color for content */
+        border-radius: 20px; /* Add larger border radius for a softer look */
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
+    }
+
+    h1 {
+        font-size: 36px;
+        color: #333;
+        margin-bottom: 20px;
+        font-weight: bold;
+        text-align: center;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1); /* Add text shadow for emphasis */
+    }
+
+    p {
+        font-size: 18px;
+        color: #666;
+        margin-bottom: 20px;
+        line-height: 1.6;
+    }
+
+    .image-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    .image-gallery img {
+        width: calc(33.33% - 20px);
+        max-width: 200px;
+        height: auto;
+        margin: 0 10px;
+        border-radius: 10px; /* Add larger border radius for images */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .image-gallery img:hover {
+        transform: scale(1.1);
+    }
+
+    @media (max-width: 768px) {
+        .image-gallery img {
+            width: calc(50% - 20px);
+        }
+    }
+
+    @media (max-width: 576px) {
+        .image-gallery img {
+            width: calc(100% - 20px);
+        }
+    }
+</style>
+
+<div class="content-container">
+    <h1>About Us</h1>
+    <p>At Astray Technologies, we are not just a web development company. We are innovators, creators, and problem solvers. We transform digital landscapes with our expertise in consulting and strategy services, enhancing the digital transformation of enterprises of all sizes.</p>
+    <div class="image-gallery">
+        {% load static %}
+        <img src="{% static 'images/Studio-Bot-Editorials-Desktop.webp' %}" alt="Image 1">
+        <img src="{% static 'images/download.jpeg' %}" alt="Image 2">
+        <img src="{% static 'images/cr.jpeg' %}" alt="Image 3">
+    </div>
+    <div>
+        <p>Our expertise spans website and software development, where we excel in delivering projects that redefine industry standards. From websites and web applications to mobile apps and 3D modeling services, we cater to diverse needs across various industries.</p>
+    </div>
+    <div>
+        <p>But what sets us apart is our dedication to user experience. We don't just create products; we craft experiences. Our user-centric approach ensures that every interaction is intuitive, seamless, and delightful, leaving a lasting impression on your customers or employees.</p>
+    </div>
+</div>
+{% endblock %}
